@@ -8,6 +8,7 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -58,12 +59,15 @@ public class KnightConfig {
 		
 		final Minstrel minstrelAspect = minstrel();
 		
-		@Before("execution(* *.embarkOnQuest(..))")
+		@Pointcut("execution(* *.embarkOnQuest(..))")
+		public void knightEmbarking(){};
+		
+		@Before("knightEmbarking()")
 		public void singBefore(JoinPoint jp) {
 			minstrelAspect.singBeforeQuest();
 		}
 
-		@After("execution(* *.embarkOnQuest(..))")
+		@After("knightEmbarking())")
 		public void singAfter(JoinPoint jp) {
 			minstrelAspect.singAfterQuest();
 		}

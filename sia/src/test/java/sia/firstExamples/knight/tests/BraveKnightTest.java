@@ -1,4 +1,4 @@
-package sia.knight.tests;
+package sia.firstExamples.knight.tests;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;

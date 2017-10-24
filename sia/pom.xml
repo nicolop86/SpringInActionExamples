@@ -63,6 +63,20 @@
 		    <artifactId>aspectjweaver</artifactId>
 		    <version>1.8.10</version>
 		</dependency>
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <version>4.3.12.RELEASE</version>
+		    <scope>test</scope>
+		</dependency>
+	<!-- https://mvnrepository.com/artifact/com.github.stefanbirkner/system-rules -->
+		<dependency>
+		    <groupId>com.github.stefanbirkner</groupId>
+		    <artifactId>system-rules</artifactId>
+		    <version>1.16.1</version>
+		    <scope>test</scope>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>sia</finalName>
