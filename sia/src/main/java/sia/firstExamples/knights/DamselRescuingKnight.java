@@ -1,6 +1,6 @@
-package sia.knights;
+package sia.firstExamples.knights;
 
-import sia.quest.RescueDamselQuest;
+import sia.firstExamples.quest.RescueDamselQuest;
 
 public class DamselRescuingKnight implements Knight {
 

@@ -6,9 +6,9 @@ import static org.mockito.Mockito.verify;
 
 import org.junit.Test;
 
-import sia.knights.BraveKnight;
-import sia.quest.Quest;
-import sia.quest.QuestException;
+import sia.firstExamples.knights.BraveKnight;
+import sia.firstExamples.quest.Quest;
+import sia.firstExamples.quest.QuestException;
 
 public class BraveKnightTest {
 	@Test

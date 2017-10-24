@@ -1,6 +1,6 @@
-package sia.knights;
+package sia.firstExamples.knights;
 
-import sia.quest.QuestException;
+import sia.firstExamples.quest.QuestException;
 
 public interface Knight {
 

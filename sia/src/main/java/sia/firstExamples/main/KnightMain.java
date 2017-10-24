@@ -1,9 +1,9 @@
-package sia.main;
+package sia.firstExamples.main;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import sia.knights.Knight;
-import sia.knights.config.KnightConfig;
+import sia.firstExamples.knights.Knight;
+import sia.firstExamples.knights.config.KnightConfig;
 
 public class KnightMain {
 	public static void main(String[] args) throws Exception {

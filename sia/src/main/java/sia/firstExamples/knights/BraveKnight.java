@@ -1,7 +1,7 @@
-package sia.knights;
+package sia.firstExamples.knights;
 
-import sia.quest.Quest;
-import sia.quest.QuestException;
+import sia.firstExamples.quest.Quest;
+import sia.firstExamples.quest.QuestException;
 
 public class BraveKnight implements Knight {
 

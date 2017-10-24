@@ -1,4 +1,4 @@
-package sia.minstrel;
+package sia.firstExamples.minstrel;
 
 import java.io.PrintStream;
 

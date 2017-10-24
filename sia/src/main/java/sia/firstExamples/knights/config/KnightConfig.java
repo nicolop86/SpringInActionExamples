@@ -1,4 +1,4 @@
-package sia.knights.config;
+package sia.firstExamples.knights.config;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,11 +12,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-import sia.knights.BraveKnight;
-import sia.knights.Knight;
-import sia.minstrel.Minstrel;
-import sia.quest.Quest;
-import sia.quest.SlayDragonQuest;
+import sia.firstExamples.knights.BraveKnight;
+import sia.firstExamples.knights.Knight;
+import sia.firstExamples.minstrel.Minstrel;
+import sia.firstExamples.quest.Quest;
+import sia.firstExamples.quest.SlayDragonQuest;
 
 @Configuration
 public class KnightConfig {
@@ -56,14 +56,16 @@ public class KnightConfig {
 	@EnableAspectJAutoProxy
 	public class MinstrelAspect {
 		
+		final Minstrel minstrelAspect = minstrel();
+		
 		@Before("execution(* *.embarkOnQuest(..))")
 		public void singBefore(JoinPoint jp) {
-			minstrel().singBeforeQuest();
+			minstrelAspect.singBeforeQuest();
 		}
 
 		@After("execution(* *.embarkOnQuest(..))")
 		public void singAfter(JoinPoint jp) {
-			minstrel().singAfterQuest();
+			minstrelAspect.singAfterQuest();
 		}
 
 	}

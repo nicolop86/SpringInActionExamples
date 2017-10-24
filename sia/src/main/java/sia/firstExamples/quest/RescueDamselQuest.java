@@ -1,4 +1,4 @@
-package sia.quest;
+package sia.firstExamples.quest;
 
 public class RescueDamselQuest implements Quest {
 
