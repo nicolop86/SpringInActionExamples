@@ -8,10 +8,26 @@ import sia.chapter3.ambiguity.park.Park;
 public class AmbiguityParkMain {
 
 	public static void main(String[] args) {
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ParkConfig.class);
-		Park newPark = ctx.getBean(Park.class);
+		String profile = null;
+		if(args.length>0){
+			try{
+				profile = args[0].toString();
+			} catch(Exception e) {
+				System.err.println(e.getStackTrace());
+				System.exit(-1);
+			}
+		} else {
+			System.err.println("No arguments found");
+			System.exit(-1);
+		}
+		
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+		context.getEnvironment().setActiveProfiles(profile);
+		context.register(ParkConfig.class);
+		context.refresh();
+		Park newPark = context.getBean(Park.class);
 		newPark.showingTrees();
-		ctx.close();
+		context.close();
 	}
 
 }
