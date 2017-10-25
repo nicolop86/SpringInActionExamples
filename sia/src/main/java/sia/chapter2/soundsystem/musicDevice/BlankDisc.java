@@ -20,7 +20,7 @@ public class BlankDisc implements CompactDisc {
 	@Override
 	public void play() {
 		System.out.println("Title: " + title);
-		System.out.println("Artist :" + artist);
+		System.out.println("Artist: " + artist);
 		System.out.println("Tracks");
 		if(!trackList.isEmpty())
 			for(String track : trackList){
